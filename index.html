@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icon/Proyecto_A.png" type="icon">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/stile.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/styloFormulario.css">
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Javascript -->
+    <script defer src="./javascript/javascript.js" ></script>
+    <script defer src="./javascript/formulario.js"></script>
+    <!-- Iconos -->
+    <script defer src="https://kit.fontawesome.com/7c5e584835.js" crossorigin="anonymous"></script>
+    <title>ViV-Victor</title>
+</head>
+<body>
+        <!-- Cabecera de la pagina -->
+    <header class="contenedor_header">
+
+            <!-- Menu de botones -->
+        <div class="contenedor_menu">
+            <ul class="menu">
+                <li class="item item_a" onclick="Facebook()" >Facebook</li>
+                <li class="item item_d" onclick="instagram()" >Instagram</li>
+                <li class="item item_b" onclick="youtube()" >YouTube</li>
+                <li class="item item_c" onclick="whatsapp()" >Whatsapp</li>
+            </ul>
+        </div>
+
+            <!-- logotipo -->
+        <div class="contenedor_logo">
+            <h1>ViV</h1>
+            <img src="./assets/icon/Logo_2.svg" alt="logotipo empresa" class="logo" onclick="vtr()" >
+            <h1>VTR</h1>
+        </div>
+
+            <!-- Datos de contacto -->
+        <div class="contenedor_datos" data-datos></div>
+    </header>
+        <!-- cuerpo de la pagina -->
+    <main>
+
+            <!-- baner de imagenes -->
+        <div class="banner">
+            <div class="capa"></div>
+            <div class="info">
+                <h2>Bienvenidos</h2>
+                <p>Bienvenidos y bienvenidas a este proyecto que nace de la idea de suplir las distintasnecesidades <strong>Eléctricas</strong> a todo publico que requiere de soluciones, <br> desarrollandas con una muy buena calidad en sus procesos, materiales de alta calidad, ejecutando las tareas en tiempo optimo <br> para beneficio de nuestros clientes y con las medidas de seguridad adecuadas para un proceso seguro.</p>
+                <details> <summary><b>Mas Informacion</b></summary>Puedes contactarnos a nuestra linea de telefono movil de servicio o enviar un correo electronico a nuestra direccion de correo. <br> Tambien puedes ver distinto material de consulta en nuestras redes sociales. Agradecemos la oportunidad de trabajar con ustedes!  </details>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+        <form action="" class="formulario" id="formulario" data-formulario>
+            <!-- Grupo Usuario -->
+            <div class="formulario__grupo" id="grupo__usuario" data-grupo__usuario>
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="usuario" data-usuario name="usuario" placeholder="Usuario" >
+                    <i class="formulario__validacion-estado fa-solid fa-rectangle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Error en usuario</p>
+            </div>
+            
+            <!-- Grupo Nombre -->
+            <div class="formulario__grupo" id="grupo__nombre" data-grupo__nombre>
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="nombre" data-nombre name="nombre" placeholder="Nombre" >
+                    <i class="formulario__validacion-estado fa-solid fa-rectangle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Error en nombre</p>
+            </div>
+            
+            <!-- Grupo Contraseña -->
+            <div class="formulario__grupo" id="grupo__password" data-grupo__password>
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" id="password" data-password name="password">
+                    <i class="formulario__validacion-estado fa-solid fa-rectangle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Error en Contraseña</p>
+            </div>
+            
+            <!-- Grupo Verificar Contraseña -->
+            <div class="formulario__grupo" id="grupo__password2" data-grupo__password2>
+                <label for="password2" class="formulario__label">Rectificar Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" id="password2" data-password2 name="password2">
+                    <i class="formulario__validacion-estado fa-solid fa-rectangle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Error de Verificacion</p>
+            </div>
+
+          <!-- Grupo Correo -->
+            <div class="formulario__grupo" id="grupo__correo" data-grupo__correo>
+                <label for="correo" class="formulario__label">Correo Electronico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" id="correo" data-correo name="correo" placeholder="ejemplo@correo.com" >
+                    <i class="formulario__validacion-estado fa-solid fa-rectangle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Error en correo</p>
+            </div>
+
+          <!-- Grupo Telefono -->
+            <div class="formulario__grupo" id="grupo__telefono" data-grupo__telefono>
+                <label for="telefono" class="formulario__label">telefono</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="telefono" data-telefono name="telefono" placeholder="1234567890" >
+                    <i class="formulario__validacion-estado fa-solid fa-rectangle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Error en telefono</p>
+            </div>
+
+            <!-- Grupo Terminos y Condiciones -->
+             <div class="formulario__grupo" id="grupo__terminos" data-grupo__terminos>
+                <label class="formulario__label">
+                    <input type="checkbox" class="formulario__checkbox" id="terminos" data-terminos>
+                    Acepto terminos y condiciones</input>
+                </label>
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje" data-formulario__mensaje>
+                <p><i class="fa-solid fa-skull-crossbones"></i><b>Error:</b>Completar Formulario</p>
+            </div>
+        
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito" data-formulario__mensaje-exito>Formulario Exitoso</p>
+            </div>
+
+        </form>
+    
+    </footer>
+
+</body>
+</html>
