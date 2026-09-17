@@ -1,0 +1,101 @@
+/**
+ *
+ * @author      Jeison Sánchez <jeison@nigma.co>
+ * @website     https://www.nigma.co
+ * Editado  	Victor.
+ *
+ */
+ 
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background: linear-gradient(90deg,rgba(87, 21, 21, 1) 0%, rgba(13, 12, 12, 1) 8%, rgba(13, 12, 12, 1) 92%, rgba(87, 21, 21, 1) 100%);
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+
+.login {
+	display: flex;
+	justify-content	: center;
+	position: relative;
+	width: 300px;
+	height: 260px;
+	padding: 20px;
+	background:rgba(112, 22, 22, 0.7) url(../assets/icon/Logo_2.svg) no-repeat center / 360px 400px;
+	border-radius: 80px 21px 112px 112px;
+	/* border: 8px double #c40; */
+}
+
+.link__login{
+	text-decoration: none;
+	color: rgb(177, 173, 173);
+
+}
+
+.login:before,
+.login__circuit-mask {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 682px;
+	height: 514px;
+}
+
+.login:before {
+	background: url(../assets/img/bg-circuito.svg);
+}
+
+.login__circuit-mask {
+	display: grid;
+	place-items: center;
+	-webkit-mask: url(../assets/img/bg-circuito.svg);
+	mask: url(../assets/img/bg-circuito.svg);
+}
+
+.login__circuit-mask:before {
+	content: '';
+	position: absolute;
+	width: 102px;
+	height: 77px;
+	border-radius: 50%;
+	border: 3px solid #00f0ff;
+	animation: onda 8s infinite;
+	animation-delay: 2s;
+}
+
+.login__heading {
+	text-align: center;
+}
+
+@keyframes onda {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(7.2);
+	}
+	100% {
+		transform: scale(7.2);
+	}
+}
+
+@media screen and (max-width: 800px){
+	
+	.login {
+		width: 200px;
+		height: 200px;
+		padding: 20px;
+		background-size: 240px 280px;
+	}
+
+	.link__login{
+		font-size: 12px;
+		padding-top: 126px;
+	}
+
+}

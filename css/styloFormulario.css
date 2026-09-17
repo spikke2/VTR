@@ -1,0 +1,166 @@
+
+.formulario{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 12px;
+
+}
+
+.formulario__label{
+    width: 90%;
+    display: block;
+    font-family: byte sharp, sans-serif;
+    font-weight: 600px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+.formulario__grupo-input{
+    position: relative;
+
+}
+
+.formulario__input{
+    width: 90%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 40px 0 10px;
+    transition: .6s ease all;
+}
+
+.formulario__input:focus{
+    border: 3px solid #1269ff;
+    outline: none;
+    box-shadow: 3px 3px 6px 1px rgba(160, 160, 160, 0.8);
+}
+
+.formulario__input-error{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-activo{
+    display: block;
+}
+
+.formulario__validacion-estado{
+    position: absolute;
+    right: 62px;
+    bottom: 3px;
+    z-index: 2;
+    font-size: 22px;
+    opacity: 0;
+}
+
+.formulario__checkbox{
+    margin-right: 10px;
+}
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar{
+    grid-column: span 2;
+}
+
+.formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background: #d21;
+    padding: 0 15px;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+.formulario__mensaje-activo{
+    display: block;
+}
+
+.formulario__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.formulario__btn{
+    height: 32px;
+    line-height: 32px;
+    width: 22%;
+    background: #040404;
+    color: #dfdfdf;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .6s ease all;
+
+}
+.formulario__btn:hover{
+    box-shadow: -4px -4px 7px 2px #222;
+}
+
+.formulario__mensaje-exito{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #129802;
+    display: none;
+}
+
+.formulario__mensaje-exito-activo{
+    display: block;
+
+}
+
+/* Estilos validacion */
+
+.formulario__grupo-correcto
+.formulario__validacion-estado{
+    color: #25D366;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto
+.formulario__label{
+    color: #b11;
+}
+
+.formulario__grupo-incorrecto
+.formulario__validacion-estado{
+    color: #b11;
+    opacity: 1;
+
+}
+
+.formulario__grupo-incorrecto
+.formulario__input{
+    border: #b11 solid 3px;
+}
+
+/* mediqueris / responsive*/
+
+@media screen and (max-width: 800px){
+    footer{
+        background: #dfdfdf url(../assets/icon/Logo_2.svg) repeat-x left top/ 76px 76px;
+    }
+    .formulario{
+        grid-template-columns: 1fr;
+    }
+
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar{
+        grid-column: 1;
+    }
+
+    .formulario__btn{
+        width: 100%;
+    }
+}
+
