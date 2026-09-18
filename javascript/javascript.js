@@ -1,15 +1,15 @@
 
-// Titulo Encabezzado
+// Titulo Encabezado
 
-const funTitulo = ()=>{
-    const contenedorTitulo = document.querySelector("[data-titulo]");
-    const titulo = document.createElement("h1");
-    contenedorTitulo.appendChild(titulo);
-    // const texto = "Hola mundo";
-    titulo.innerText = "ViV / VTR";
-    titulo.className="titulo_p";
+// const funTitulo = ()=>{
+//     const contenedorTitulo = document.querySelector("[data-titulo]");
+//     const titulo = document.createElement("h1");
+//     contenedorTitulo.appendChild(titulo);
+//     // const texto = "Hola mundo";
+//     titulo.innerText = "ViV / VTR";
+//     titulo.className="titulo_p";
 
-}
+// }
 
 
 // funTitulo();
