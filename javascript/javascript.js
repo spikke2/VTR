@@ -63,7 +63,7 @@ const instagram = ()=>{
 
 //Funcion redireccionar
 const vtr = ()=>{
-    window.open("./html/index.html");
+    window.open("../index.html", "_blank");
     
 }
 
