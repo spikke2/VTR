@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
+
+
+
 .contenedor__cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin: 20px 70px;
 
 }
@@ -17,24 +20,77 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 300px;
+    justify-content: space-around;
     height: 400px;
-    background-color: #f0f0f3;
-    box-shadow: 4px -4px 5px #aeaec0;
-    border-radius: 8px;
-}
-
-.img__card{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px 0 12px 0;
-}
-
-.texto__cards{
+    width: 350px;
+    padding: 0 auto;
+    gap: 12px;
+    box-shadow: -3px -1px 3px 5px #8e8e80;
+    border-radius: 42% 21% 22px 21%;
     text-align: center;
-    font-size: 14px;
+
+}
+
+.img__a{
+    background: url("../assets/img/trabajos/Conmutable.jpg") no-repeat center;
+
+
+}
+
+.img__b{
+    background: url("../assets/img/trabajos/Reparacion.jpeg") center/cover no-repeat;
+
+}
+
+.img__c{
+    background: url("../assets/img/trabajos/camaras.jpg") center/cover no-repeat;
+
+}
+
+.img__d{
+    background: url("../assets/img/trabajos/Babaria-2.jpeg") center/cover no-repeat;
+
+}
+
+.img__e{
+    background: url("../assets/img/trabajos/Materiales.jpg") center/cover no-repeat;
+
+}
+
+.img__f{
+    background: url("../assets/img/trabajos/Herramientas.jpg") center/cover no-repeat;
+
+}
+
+.titulo__card{
+
+
+  font-family: "Caacupe One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+
+    color: #700;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tipo_a{
+    color: #500;
+}
+
+.texto__card-{
+    
+    font-family: "Scoutie Sans", sans-serif;
+    font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+
     padding: 0 10px;
+    color: #fff;
+    background: rgba(2, 2, 2, 0.4);
+}
+
+.tipo_b{
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff
 }
