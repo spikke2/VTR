@@ -105,15 +105,21 @@
 }
 
 @media screen and (max-width: 426px){
+    body{
+        overflow-x: hidden;
+        background: #f0f0f3;
+    }
     .contenedor__cards{
         grid-template-columns: 1fr;
-        width: 100vw;
-        margin: 20px 0px;
+        width: 96vw;
+        margin: 20px 10px;
+
     }
     .card{
         width: 96%;
         height: 400px;
         margin: 0 auto;
         border-radius: 10px;
+        font-size: 14px;
     }
 }
