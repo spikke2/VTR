@@ -194,7 +194,8 @@ footer{
     .menu{
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 12px;
+        margin: 20px 0;
     }
     .item{
         width: 100%;
