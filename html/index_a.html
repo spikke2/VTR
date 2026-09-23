@@ -7,6 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/stile.css">
     <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/formulario.css">
     <!-- fuentes -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,14 +87,84 @@
                 <h2 class="titulo__card">Herramientas</h2>
                 <p class="texto__card- tipo_b">Trabajamos con herramientas de excelente calidad y en perfecto estado para asegurar un trabajo eficiente y exitoso.</p>
             </div>
-
         </div>
+
+        <form action="" class="formulario" id="formulario">
+            
+            <!-- grupo usuario -->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Nombre Del Contacto</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="usuario" name="usuario" placeholder="Nombre Del Contacto">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p class="formulario__input-error">Solo puede contener letras</p>
+            </div>
+            
+            <!-- grupo empresa -->
+            <div class="formulario__grupo" id="grupo__empresa">
+                <label for="empresa" class="formulario__label">Nombre De La Empresa</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="empresa" name="empresa" placeholder="Nombre Empresa">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p class="formulario__input-error">Solo puede contener letras y numeros</p>
+            </div>
+            
+            <!-- grupo phone -->
+            <div class="formulario__grupo" id="grupo__phone">
+                <label for="phone" class="formulario__label">Numero De Contacto</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="phone" name="phone" placeholder="0123456789">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p class="formulario__input-error">Solo Puede Contener Numeros</p>
+            </div>
+            
+            <!-- grupo email -->
+            <div class="formulario__grupo" id="grupo__email">
+                <label for="email" class="formulario__label">Correo Electronico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" id="email" name="email" placeholder="Nombre@ejemplo.com">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p class="formulario__input-error">nombre@ejemplo.com</p>
+            </div>
+
+            <!-- grupo descripcion -->
+            <div class="formulario__grupo formulario__grupo-descripcion" id="grupo__descripcion">
+                <label for="descripcion" class="formulario__label">Descripcion Del Servicio</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" id="descripcion" name="descripcion" placeholder="descripcion general">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p class="formulario__input-error">Solo puede contener letras </p>
+            </div>
+
+            <div class="formulario__grupo-terminos" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input type="checkbox" class="formulario__checkbox" id="terminos" name="terminos">
+                    Acepta Terminos y Condiciones
+                    </input>
+                </label>
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fa-solid fa-radiation"></i><b> Error: </b>Completar Todos Los Campos</p>
+            </div>
+            
+            <div class="formulario__grupo formulario__grupo-boton-enviar">
+                <button class="formulario__boton">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Se Envio Exitosamente !</p>
+            </div>
+
+        </form>
 
     </main>
     
     <footer>
 
-        rrr
+    
     
     </footer>
 
