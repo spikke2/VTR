@@ -1,0 +1,127 @@
+
+
+.contenedor__cards{
+    width: 100%;
+    height: 900px;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    place-items: center;
+    gap: 6px;
+
+}
+
+.card{
+    width: 320px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: -3px -1px 3px 5px #8e8e80;
+    border-radius: 26% 18% 26% 18%;
+    text-align: center;
+
+}
+
+.img__a{
+
+    background: url("../assets/img/trabajos/Conmutable.jpg") no-repeat center/cover;
+
+
+}
+
+.img__b{
+    background: url("../assets/img/trabajos/Reparacion.jpeg") center/cover no-repeat;
+
+}
+
+.img__c{
+    background: url("../assets/img/trabajos/camaras.jpg") center/cover no-repeat;
+
+}
+
+.img__d{
+    background: url("../assets/img/trabajos/Babaria-2.jpeg") center/cover no-repeat;
+
+}
+
+.img__e{
+    background: url("../assets/img/trabajos/Materiales.jpg") center/cover no-repeat;
+
+}
+
+.img__f{
+    background: url("../assets/img/trabajos/Herramientas.jpg") center/cover no-repeat;
+
+}
+
+.titulo__card{
+    height: 40px;
+    width: 66%;
+    margin: 10px auto;
+
+    font-family: "Caacupe One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #700;
+    box-shadow: inset 2px 2px 32px 5px #eff461;
+    border-radius: 16px 6px;
+
+}
+
+.texto__card-{
+    height: 120px;
+    width: 90%;
+
+    font-family: "Scoutie Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+
+    padding: 10px;
+    margin: 20px  auto;
+    color: #fff;
+    box-shadow:inset 2px 2px 140px 0.2px #6c1;
+    border-radius: 40px 10px;
+}
+
+
+@media screen and (max-width: 800px){
+    .contenedor__cards{
+        height: 1300px;
+        width: 100%;
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+
+    }
+    .card{
+        width: 360px;
+    }
+    .texto__card-{
+        padding: 10px auto;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    body{
+        background: #f0f0f3;
+    }
+    .contenedor__cards{
+        height: 2500px;
+        width: 100vw;
+        grid-template-columns: 1fr;
+
+
+    }
+    .card{
+        width: 96%;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 10px;
+    }
+    .texto__card-{
+        height: auto;
+        padding: 12px;
+    }
+}
