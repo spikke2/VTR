@@ -1,113 +1,104 @@
 
 const formulario = document.getElementById("formulario");
-const inputs = document.querySelectorAll("[data-formulario] input");
+const inputs = document.querySelectorAll("#formulario input");
 
 const expresiones = {
-    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,10}$/ // 7 a 14 numeros.
+    usuario: /^[a-zA-ZÀ-ÿ.\s]{3,42}$/,
+    empresa: /^[a-zA-Z0-9.,_-\s]{3,80}$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    phone: /^\d{7,10}$/,
+    descripcion: /^[a-zA-Z0-9,._-\s]+$/,
 }
 
-const campos = {
-    usuario: false,
-    nombre: false,
-    password: false,
-    correo: false,
-    telefono: false
+const campos={
+    usuario:false,
+    empresa:false,
+    email:false,
+    phone:false,
+    descripcion:false
 }
 
-const validacionFormulario = (e) =>{
-    switch(e.target.name) {
+const validarFormulario = (e)=>{
+    switch(e.target.name){
         case "usuario":
             validarCampo(expresiones.usuario, e.target, "usuario");
-        break
-        case "nombre":
-            validarCampo(expresiones.nombre, e.target, "nombre");
-        break
-        case "password":
-            validarCampo(expresiones.password, e.target, "password");
-            validarPasswordDos();
-        break
-        case "password2":
-            validarPasswordDos();
-        break
-        case "correo":
-            validarCampo(expresiones.correo, e.target, "correo");
-        break
-        case "telefono":
-            validarCampo(expresiones.telefono, e.target, "telefono");
+        break;
+        case "empresa":
+            validarCampo(expresiones.empresa, e.target, "empresa");
+        break;
+        case "phone":
+            validarCampo(expresiones.phone, e.target, "phone");
+        break;
+        case "email":
+            validarCampo(expresiones.email, e.target, "email");
+        break;
+        case "descripcion":
+            validarCampo(expresiones.descripcion, e.target, "descripcion");
         break
     }
-
 }
 
-const validarCampo = (expresion, input, campo) =>{
+const validarCampo = (expresion, input, campo)=>{
     if(expresion.test(input.value)){
-        document.querySelector(`[data-grupo__${campo}]`).classList.add("formulario__grupo-correcto");
-        document.querySelector(`[data-grupo__${campo}]`).classList.remove("formulario__grupo-incorrecto");
-        document.querySelector(`[data-grupo__${campo}] .formulario__validacion-estado`).classList.add("fa-square-check");
-        document.querySelector(`[data-grupo__${campo}] .formulario__validacion-estado`).classList.remove("fa-rectangle-xmark");
-        document.querySelector(`[data-grupo__${campo}] .formulario__input-error`).classList.remove("formulario__input-error-activo");
-        campos[campo] = true;
+        document.getElementById(`grupo__${campo}`).classList.remove("formulario__grupo-incorrecto");
+        document.getElementById(`grupo__${campo}`).classList.add("formulario__grupo-correcto");
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove("formulario__input-error-activo");
+        document.querySelector(`#grupo__${campo} .formulario__validacion-estado`).classList.remove("fa-circle-exclamation");
+        document.querySelector(`#grupo__${campo} .formulario__validacion-estado`).classList.add("fa-circle-check");
+        campos[campo]=true;
+
     }else{
-        document.querySelector(`[data-grupo__${campo}]`).classList.add("formulario__grupo-incorrecto");
-        document.querySelector(`[data-grupo__${campo}]`).classList.remove("formulario__grupo-correcto");
-        document.querySelector(`[data-grupo__${campo}] .formulario__validacion-estado`).classList.add("fa-rectangle-xmark");
-        document.querySelector(`[data-grupo__${campo}] .formulario__validacion-estado`).classList.remove("fa-square-check");
-        document.querySelector(`[data-grupo__${campo}] .formulario__input-error`).classList.add("formulario__input-error-activo");
-        campos[campo] = false;
+        document.getElementById(`grupo__${campo}`).classList.add("formulario__grupo-incorrecto");
+        document.getElementById(`grupo__${campo}`).classList.remove("formulario__grupo-correcto");
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add("formulario__input-error-activo");
+        document.querySelector(`#grupo__${campo} .formulario__validacion-estado`).classList.add("fa-circle-exclamation");
+        document.querySelector(`#grupo__${campo} .formulario__validacion-estado`).classList.remove("fa-circle-check");
+        campos[campo]=false;
     }
 }
 
-const validarPasswordDos = ()=>{
-    const inputPasswordUno = document.querySelector("[data-password]");
-    const inputPasswordDos = document.querySelector("[data-password2]");
-    if(inputPasswordUno.value !== inputPasswordDos.value){
-        document.querySelector("[data-grupo__password2]").classList.add("formulario__grupo-incorrecto");
-        document.querySelector("[data-grupo__password2]").classList.remove("formulario__grupo-correcto");
-        document.querySelector("[data-grupo__password2] .formulario__validacion-estado").classList.add("fa-rectangle-xmark");
-        document.querySelector("[data-grupo__password2] .formulario__validacion-estado").classList.remove("fa-square-check");
-        document.querySelector("[data-grupo__password2] .formulario__input-error").classList.add("formulario__input-error-activo");
-        campos[password] = false;
-    }else{
-        document.querySelector("[data-grupo__password2]").classList.remove("formulario__grupo-incorrecto");
-        document.querySelector("[data-grupo__password2]").classList.add("formulario__grupo-correcto");
-        document.querySelector("[data-grupo__password2] .formulario__validacion-estado").classList.remove("fa-rectangle-xmark");
-        document.querySelector("[data-grupo__password2] .formulario__validacion-estado").classList.add("fa-square-check");
-        document.querySelector("[data-grupo__password2] .formulario__input-error").classList.remove("formulario__input-error-activo");
-        campos[password] = true;
-    }
-}
-
-// recorre los imputs y escuha acion de teclear y salir del input
 inputs.forEach((input)=>{
-    input.addEventListener("keyup", validacionFormulario);
-    input.addEventListener("blur", validacionFormulario);
+    input.addEventListener("keyup",validarFormulario);
+    input.addEventListener("blur",validarFormulario);
 })
 
-// Funcion para validar y enviar formulario
-formulario.addEventListener("submit", (e)=>{
+formulario.addEventListener("submit", (e) => {
     e.preventDefault();
-    const terminos = document.querySelector("[data-terminos]");
-    //En caso de tener todos los campos completos y check activo de terminos 
-    if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked){
+    const terminos = document.getElementById("terminos");
+    if(campos.usuario && campos.empresa && campos.email && campos.phone && campos.descripcion && terminos.checked){
         formulario.reset();
-        document.querySelector("[data-formulario__mensaje-exito]").classList.add("formulario__mensaje-exito-activo");
+        document.getElementById("formulario__mensaje-exito").classList.add("formulario__mensaje-exito-activo");
         setTimeout(()=>{
-            document.querySelector("[data-formulario__mensaje-exito]").classList.remove("formulario__mensaje-exito-activo");
-        }, 4000);
-        document.querySelectorAll(".formulario__grupo").forEach((icono)=>{
+            document.getElementById("formulario__mensaje-exito").classList.remove("formulario__mensaje-exito-activo");
+        },6000);
+        document.querySelectorAll(".formulario__grupo-correcto").forEach((icono)=>{
             icono.classList.remove("formulario__grupo-correcto");
-        });
-        document.querySelector("[data-formulario__mensaje]").classList.remove("formulario__mensaje-activo");
-        // En caso de no tener todos los campos y el check
+        })
+        document.querySelector(".formulario__mensaje").classList.remove("formulario__mensaje-activo");
     }else{
-        document.querySelector("[data-formulario__mensaje]").classList.add("formulario__mensaje-activo");
-
+        document.querySelector(".formulario__mensaje").classList.add("formulario__mensaje-activo");
+        setTimeout(()=>{
+            document.querySelector(".formulario__mensaje").classList.remove("formulario__mensaje-activo");
+        },4000)
     }
-
 })
 
+        // >---validacion campo---<
 
+// const validarFormulario = (e)=>{
+    // switch(e.target.name){
+//     if(expresiones.usuario.test(e.target.value)){
+//         document.getElementById("grupo__usuario").classList.remove("formulario__grupo-incorrecto");
+//         document.getElementById("grupo__usuario").classList.add("formulario__grupo-correcto");
+//         document.querySelector("#grupo__usuario .formulario__input-error").classList.remove("formulario__input-error-activo");
+//         document.querySelector("#grupo__usuario .formulario__validacion-estado").classList.remove("fa-circle-exclamation");
+//         document.querySelector("#grupo__usuario .formulario__validacion-estado").classList.add("fa-circle-check");
+        
+//     }else{
+//         document.getElementById("grupo__usuario").classList.add("formulario__grupo-incorrecto");
+//         document.getElementById("grupo__usuario").classList.remove("formulario__grupo-correcto");
+//         document.querySelector("#grupo__usuario .formulario__input-error").classList.add("formulario__input-error-activo");
+//         document.querySelector("#grupo__usuario .formulario__validacion-estado").classList.add("fa-circle-exclamation");
+//         document.querySelector("#grupo__usuario .formulario__validacion-estado").classList.remove("fa-circle-check");
+//         }
+// }

@@ -103,7 +103,7 @@
     }
 }
 
-@media screen and (max-width: 428px){
+@media screen and (max-width: 480px){
     body{
         background: #f0f0f3;
     }
