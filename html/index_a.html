@@ -9,21 +9,25 @@
     <link rel="stylesheet" href="../css/card.css">
     <link rel="stylesheet" href="../css/formulario.css">
     <!-- fuentes -->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     
-<!-- Javascript -->
-    <script defer src="../javascript/javascript.js" ></script>
+        <!-- Javascript -->
+    <script defer src="../javascript/javascript.js"></script>
+    <script defer type="module" src="../javascript/formulario.js"></script>
+
+    <!------ID------>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.0/uuid.min.js" integrity="sha512-ItCQZ+YZvhn8MTzDZtxcv5wMW5+tk/Xe5kVobGs6Xf/D/zmu/vQet9tfjrfUblAIgetyvQy8+LdwtegId3hw0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Iconos -->
     <script defer src="https://kit.fontawesome.com/7c5e584835.js" crossorigin="anonymous"></script>
-    <title>ViV-Victor</title>
+    <title>ViV-VTR</title>
 </head>
 <body>
         <!-- Cabecera de la pagina -->
@@ -89,33 +93,33 @@
             </div>
         </div>
 
-        <form action="" class="formulario" id="formulario">
+        <form action="" class="formulario" id="formulario" data-formulario>
             
             <!-- grupo usuario -->
             <div class="formulario__grupo" id="grupo__usuario">
                 <label for="usuario" class="formulario__label">Nombre Del Contacto</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" id="usuario" name="usuario" placeholder="Nombre Del Contacto">
+                    <input type="text" class="formulario__input" id="usuario" name="usuario" data-valorUsuario placeholder="Nombre Del Contacto">
                     <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
                 </div>
-                <p class="formulario__input-error">Solo puede contener letras</p>
+                <p class="formulario__input-error">Solo Puede Contener Letras y Espacios</p>
             </div>
             
             <!-- grupo empresa -->
             <div class="formulario__grupo" id="grupo__empresa">
                 <label for="empresa" class="formulario__label">Nombre De La Empresa</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" id="empresa" name="empresa" placeholder="Nombre Empresa">
+                    <input type="text" class="formulario__input" id="empresa" name="empresa" data-valorEmpresa placeholder="Nombre Empresa">
                     <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
                 </div>
-                <p class="formulario__input-error">Solo puede contener letras y numeros</p>
+                <p class="formulario__input-error">Solo Puede Contener Letras, Numeros y Espacios</p>
             </div>
             
             <!-- grupo phone -->
             <div class="formulario__grupo" id="grupo__phone">
                 <label for="phone" class="formulario__label">Numero De Contacto</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" id="phone" name="phone" placeholder="0123456789">
+                    <input type="text" class="formulario__input" id="phone" name="phone" data-valorPhone placeholder="0123456789">
                     <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
                 </div>
                 <p class="formulario__input-error">Solo Puede Contener Numeros</p>
@@ -125,7 +129,7 @@
             <div class="formulario__grupo" id="grupo__email">
                 <label for="email" class="formulario__label">Correo Electronico</label>
                 <div class="formulario__grupo-input">
-                    <input type="email" class="formulario__input" id="email" name="email" placeholder="Nombre@ejemplo.com">
+                    <input type="email" class="formulario__input" id="email" name="email" data-valorEmail placeholder="Nombre@ejemplo.com">
                     <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
                 </div>
                 <p class="formulario__input-error">nombre@ejemplo.com</p>
@@ -135,10 +139,10 @@
             <div class="formulario__grupo formulario__grupo-descripcion" id="grupo__descripcion">
                 <label for="descripcion" class="formulario__label">Descripcion Del Servicio</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" id="descripcion" name="descripcion" placeholder="descripcion general">
+                    <input type="text" class="formulario__input" id="descripcion" name="descripcion" data-valorDescripcion placeholder="descripcion general">
                     <i class="formulario__validacion-estado fa-solid fa-circle-exclamation"></i>
                 </div>
-                <p class="formulario__input-error">Solo puede contener letras </p>
+                <p class="formulario__input-error">Solo Puede Contener Letras, Numeros y Espacios</p>
             </div>
 
             <div class="formulario__grupo-terminos" id="grupo__terminos">
@@ -154,8 +158,8 @@
             </div>
             
             <div class="formulario__grupo formulario__grupo-boton-enviar">
-                <button class="formulario__boton">Enviar</button>
-                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Se Envio Exitosamente !</p>
+                <button class="formulario__boton" data-btn>Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Se Envio Exitosamente Tus Datos, <b>¡Nos Pondremos En Contacto Con Tigo!</b> Gracias.</p>
             </div>
 
         </form>
@@ -163,10 +167,10 @@
     </main>
     
     <footer>
-
+        
     
     
     </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.0/uuid.min.js" integrity="sha512-ItCQZ+YZvhn8MTzDZtxcv5wMW5+tk/Xe5kVobGs6Xf/D/zmu/vQet9tfjrfUblAIgetyvQy8+LdwtegId3hw0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
