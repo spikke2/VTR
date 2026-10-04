@@ -1,0 +1,45 @@
+{
+  "datos": [
+    {
+      "usuario": "viktor",
+      "empresa": "ViVTR",
+      "email": "ejemplo@ejemplo.com",
+      "phone": "3121231235",
+      "descripcion": "instalacion de tres lamparas",
+      "id": "1"
+    },
+    {
+      "usuario": "ivonne",
+      "empresa": "ViV-VTR",
+      "email": "ivonne@gmail.com",
+      "phone": "3145692090",
+      "descripcion": "GRACIAS",
+      "id": "duBuGHut7hQ"
+    },
+    {
+      "usuario": "Ivonne",
+      "empresa": "ViV",
+      "email": "ubaquereyes@gmail.com",
+      "phone": "3006949772",
+      "descripcion": "hola guapoldo",
+      "id": "NtOde8B2RIQ"
+    },
+    {
+      "usuario": "victor fdfdfd",
+      "empresa": "ViV-VTR",
+      "email": "esspikke@gmail.com",
+      "phone": "3145692090",
+      "descripcion": "GRACIAS",
+      "id": "AzndVUMt_eg"
+    },
+    {
+      "usuario": "eleonor",
+      "empresa": "ViV-VTR",
+      "email": "esspikke@gmail.com",
+      "phone": "3145692090",
+      "descripcion": "GRACIAS",
+      "id": "4Ka_RYzbDUs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

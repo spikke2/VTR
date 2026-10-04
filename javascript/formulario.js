@@ -62,15 +62,28 @@ inputs.forEach((input)=>{
     input.addEventListener("blur",validarFormulario);
 })
 
+import { clienteServicios } from "../javascript/Servicios.js";
+
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     const terminos = document.getElementById("terminos");
     if(campos.usuario && campos.empresa && campos.email && campos.phone && campos.descripcion && terminos.checked){
+        const usuarios = document.querySelector("[data-valorUsuario]").value;
+        const empresas = document.querySelector("[data-valorEmpresa]").value;
+        const emails = document.querySelector("[data-valorEmail]").value;
+        const phones = document.querySelector("[data-valorPhone]").value;
+        const descripciones = document.querySelector("[data-valorDescripcion]").value;
+        
+        clienteServicios.crearCliente (usuarios, empresas, emails, phones, descripciones)
+        .then(respuesta => {})
+        .catch(error => console.error("Error al crear cliente:", error));
+        
         formulario.reset();
+
         document.getElementById("formulario__mensaje-exito").classList.add("formulario__mensaje-exito-activo");
         setTimeout(()=>{
             document.getElementById("formulario__mensaje-exito").classList.remove("formulario__mensaje-exito-activo");
-        },6000);
+        },7000);
         document.querySelectorAll(".formulario__grupo-correcto").forEach((icono)=>{
             icono.classList.remove("formulario__grupo-correcto");
         })
@@ -81,9 +94,12 @@ formulario.addEventListener("submit", (e) => {
             document.querySelector(".formulario__mensaje").classList.remove("formulario__mensaje-activo");
         },4000)
     }
+
 })
 
-        // >---validacion campo---<
+
+
+// >---validacion campo---<
 
 // const validarFormulario = (e)=>{
     // switch(e.target.name){
@@ -102,3 +118,4 @@ formulario.addEventListener("submit", (e) => {
 //         document.querySelector("#grupo__usuario .formulario__validacion-estado").classList.remove("fa-circle-check");
 //         }
 // }
+

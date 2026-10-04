@@ -1,0 +1,30 @@
+.tablaCliente{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.columna__a{
+    height: 1rem;
+    width: 100px;
+    border: solid 2px #222;
+}
+
+.columna__b{
+    height: 1rem;
+    width: 100px;
+    border: solid 2px #222;
+}
+
+.column{
+    width: 700px;
+    
+}
+/* .fila__b .column{
+    text-align: start;
+    
+} */
+
