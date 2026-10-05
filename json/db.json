@@ -1,0 +1,21 @@
+{
+  "datos": [
+    {
+      "usuario": "viktor",
+      "empresa": "ViVTR",
+      "email": "ejemplo@ejemplo.com",
+      "phone": "3121231235",
+      "descripcion": "instalacion de tres lamparas",
+      "id": "1"
+    },
+    {
+      "usuario": "victor II",
+      "empresa": "ViV-VTR",
+      "email": "esspikke@gmail.com",
+      "phone": "3145692090",
+      "descripcion": "GRACIAS",
+      "id": "0JhwEsTwSdQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --CSS-- -->
+    <link rel="stylesheet" href="../css/stile.css">
+    <link rel="stylesheet" href="../css/Datos.css">
+    
+    <!-- >----JavaScript----< -->
+    <script defer type="module" src="../javascript/controller.js"></script>
+
+    <title>ViV--Clientes</title>
+</head>
+<body>
+    <header>
+                <!-- Cabecera de la pagina -->
+    <header class="contenedor_header">
+
+            <!-- Menu de botones -->
+        <div class="contenedor_menu">
+            <ul class="menu">
+                <li class="item item_a" onclick="Facebook()" >Facebook</li>
+                <li class="item item_d" onclick="instagram()" >Instagram</li>
+                <li class="item item_b" onclick="youtube()" >YouTube</li>
+                <li class="item item_c" onclick="whatsapp()" >Whatsapp</li>
+            </ul>
+        </div>
+
+            <!-- logotipo -->
+        <div class="contenedor_logo">
+            <h1>ViV</h1>
+            <img src="../assets/icon/Logo_2.svg" alt="logotipo empresa" class="logo" onclick="vtr()" >
+            <h1>VTR</h1>
+        </div>
+
+            <!-- Datos de contacto -->
+        <div class="contenedor_datos" data-datos></div>
+    </header>
+    <main>
+        <table class="tablaCliente" data-table>
+            <tr class="fila fila__a">
+                <td class="columna__a">Usuario</td>
+                <td class="columna__a">Empresa</td>
+                <td class="columna__a">Correo</td>
+                <td class="columna__a">Telefono</td>
+                <td class="columna__a column">Descripcion</td>
+                <td class="columna__a">Estado</td>
+            </tr>
+            
+        </table>
+    </main>
+    <footer></footer>
+
+</body>
+</html>
