@@ -159,9 +159,11 @@ background: #444;
 
 /*----------------------- Responsive---------------------- */
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 960px){
     .formulario{
-        height: 700px;
+        position: relative;
+        top: 70px;
+        height: 720px;
         grid-template-columns: 1fr;
     }
 
@@ -180,4 +182,11 @@ background: #444;
         padding: 0 20px;
     }
 
+}
+@media screen and (max-width: 480px){
+    .formulario{
+        height: 740;
+        position: relative;
+        top: 86px;
+    }
 }

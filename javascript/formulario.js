@@ -75,9 +75,7 @@ formulario.addEventListener("submit", (e) => {
         const descripciones = document.querySelector("[data-valorDescripcion]").value;
         
         clienteServicios.crearCliente (usuarios, empresas, emails, phones, descripciones)
-        .then(respuesta => {
-            
-        })
+        .then(respuesta => {})
         .catch(error => console.error("Error al crear cliente:", error));
         
         formulario.reset();

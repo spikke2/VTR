@@ -7,6 +7,38 @@
       "phone": "3121231235",
       "descripcion": "instalacion de tres lamparas",
       "id": "1"
+    },
+    {
+      "usuario": "victor II",
+      "empresa": "ViV-VTR",
+      "email": "esspikke@gmail.com",
+      "phone": "3145692090",
+      "descripcion": "GRACIAS",
+      "id": "0JhwEsTwSdQ"
+    },
+    {
+      "usuario": "alfredo",
+      "empresa": "fmaALfredo",
+      "email": "Alfredo@gmail.com",
+      "phone": "147258369",
+      "descripcion": "GRACIAS",
+      "id": "5skuRI3SCi0"
+    },
+    {
+      "usuario": "carmen olmos",
+      "empresa": "alfredoandcarmen",
+      "email": "alfredoandcarmen@xn--losextrao-s6a.com",
+      "phone": "3005228796",
+      "descripcion": "GRACIAS",
+      "id": "4XbHIYQKqJ4"
+    },
+    {
+      "usuario": "aaaa",
+      "empresa": "qqqqq",
+      "email": "intento@cuatro.com",
+      "phone": "3145692090",
+      "descripcion": "gracias  totales",
+      "id": "jUC3DPfuEUM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

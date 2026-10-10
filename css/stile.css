@@ -5,50 +5,58 @@
     box-sizing: border-box;
 }
 
-body{
-    width: 100%;
+body::-webkit-scrollbar{
+    display: none;
+    background: #dedede;
+
 }
 
-                                                /* ENCABEZADO */
+                    /* ENCABEZADO */
 
 /* Contenedor caja Encabezado */
-.contenedor_header{
+.contenedor__cabecera{
+    height: 32px;
     width: 100%;
-    /* Ubicacion y Centrar cajas del header */
+    position: fixed;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
-    place-items: center;
-    background: #f0f0f3;
+    z-index: 2;
+    background: #eee;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom: #c96a25 solid 3px;
     
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    /* border: darkred solid 1px; */
 }
 
 /* MENU */
 
-.contenedor_menu{}
+.contenedor_menu{
+    place-content: center;
+    margin: 0 auto;
+    /* border: #f22 solid 1px; */
+}
 
 .menu{
-    
-    /*posicion item lista horizontal */
     display: flex;
-    gap: 22px;
-    margin: 0 12px;
+    gap: 8px;
     
 }
 
 .item{
-    display: flex;              /*Centra texto         */
-    justify-content: center;    /*del interior del item*/
-    align-items: center;
+    text-align: center;
     list-style: none;
     /* Estilizacion y tamaño boton */
     height: 18px;   
-    width: 90px;
-    color: #afafaf;
+    width: 84px;
+    color: #8f8f8f;
     font-size: 14px;
     font-weight: bold;
     /* polimorfismo */
     box-shadow: 4px -4px 5px #aeaec0;
-    border-radius: 12px;
+    border-radius: 6px;
     
 }
 
@@ -86,53 +94,73 @@ body{
 .item:active{
     /* polimorfismo */
     box-shadow:  inset -4px 4px 2px #c5c5c5, inset 4px -4px 2px #ffffff;
-
-}
-
-/* LOGOTIPO */        
-
-.contenedor_logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36%;
-    height: 30px;
-    margin-top: 2px;
     
 }
 
-.logo{
-    width: 70px;
-    height: 50px;
-    cursor: pointer;
-
-}
-
-/* TITULO */
-
-.contenedor_titulo_principal{}
-
-.titulo_p{
-    font-size: 22px;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
- /* border-bottom: 6px groove #ff4411; */
-
-}
-
-.menuHeader{
+/* LOGOTIPO */
+.contenedor_logo{
+    height: 30px;
+    /* width: 200px; */
     display: flex;
-    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    /* border: #f22 solid 1px; */
+}
+.logo{
+    height: 31px;
+    cursor: pointer;
 }
 
-li{
-    list-style: none;
+
+.titulo_principal{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    margin: 0 4px;
+    text-align: center;
+    color: #2b2b2b;
 }
 
-                        /* Contenido/Cuerpo */
+/* contenedor contacto */
+.contacto{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto;
+    /* border: #f22 solid 1px; */
+}
+/* contacto telefono */
+.contacto__phone{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+/* contacto correo */
+.contacto__email{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+                /* Contenido/Cuerpo */
 
 .banner{
+    position: relative;
+    top: 34px;
     width: 99%;
     height: 420px;
     animation: spin 10s infinite linear alternate;
@@ -143,7 +171,9 @@ li{
     color: #fff;
     margin: 0 auto;
 }
-
+h2{
+    font-size: 3rem;
+}
 .info{
     width: 98%;
     height: 100%;
@@ -162,7 +192,6 @@ li{
     color: #f22;
 }
 
-details{}
 
 @keyframes spin {
     0%, 20%{background-image: url(../assets/img/proyecto_img/pg\ \(2\).jpg);}
@@ -182,33 +211,101 @@ footer{
     background: #dfdfdf;
 }
 
-@media screen and (max-width: 800px){
-    .contenedor_header{
+@media screen and (max-width: 960px){
+        .contenedor__cabecera{
+        height: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+    }
+    .contenedor_logo{
+        width: 100vw;
+        height: 30px;
+        align-items: center;
+        order: 1;
+        grid-column: span 2;
+        /* border: #f22 solid 1px; */
+    }
+    .contenedor_menu{
+        order: 3;
+    }
+        .contacto{
+        order: 2;
+    }
+    .banner{
+        top: 62px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    .contenedor__cabecera{
+        height: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 4fr;
+    }
+    
+    .despliegueMenu{
+        height: 180px;
+        gap: 2px;
+    }
+    
+    .contenedor_logo{
+        height: 30px;
+        grid-column: span 1;
+        /* border: #f22 solid 1px; */
+    }
+
+    .contenedor_menu-activo{
+        height: 110px;
+        order: 3;
+    }
+    
+    .menu-activo{
+        height: 100%;
+        gap: 8px;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        align-items: center;
+        justify-content: center;
+        /* border: #f22 solid 1px; */
+        
+    }
+
+    .item-activo{   
+    width: 90%;
     }
     
     .contenedor_menu{
+        display: none;
+    }
+    
+    .contacto-activo{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        margin: 0 auto;
+        gap: 22px;
         order: 2;
-        width: 90%;
-    }
-    .menu{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 20px 0;
-    }
-    .item{
-        width: 100%;
-        font-size: 16px;
-        font-weight: 600;
-
+        /* border: #f22 solid 1px; */
     }
 
-    .info{
-        width: 90%;
-        font-size: 16px;
-        font-weight: 600;
+    .contacto{
+
+        display: none;
     }
+
+    .banner{
+        top: 32px;
+    }
+
+}
+
+/* footer */
+.ul{
+    display: flex;
+    flex-direction: column;
 }

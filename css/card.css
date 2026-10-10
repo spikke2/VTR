@@ -1,18 +1,21 @@
 
 
 .contenedor__cards{
+    position: relative;
+    top: 16px;
     width: 100%;
-    height: 900px;
+    height: 920px;
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     place-items: center;
-    gap: 6px;
+    align-content: space-evenly;
+    gap: 4px;
 
 }
 
 .card{
     width: 320px;
-    height: 400px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,12 +89,14 @@
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 960px){
     .contenedor__cards{
-        height: 1300px;
+        top: 68px;
+        height: 1290px;
         width: 100%;
         display: grid;
         grid-template-columns:repeat(2, 1fr);
+        row-gap: 10px;
 
     }
     .card{
@@ -108,8 +113,10 @@
         background: #f0f0f3;
     }
     .contenedor__cards{
-        height: 2500px;
+        top: 40px;
+        height: 2560px;
         width: 100vw;
+        gap: 15px;
         grid-template-columns: 1fr;
 
 
