@@ -1,0 +1,262 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+    background: #dedede;
+
+}
+
+                    /* ENCABEZADO */
+
+/* Contenedor caja Encabezado */
+.contenedor__cabecera{
+    height: 32px;
+    width: 100%;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    z-index: 2;
+    background: #eee;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom: #c96a25 solid 3px;
+    
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    /* border: darkred solid 1px; */
+}
+
+/* MENU */
+
+.contenedor_menu{
+    place-content: center;
+    margin: 0 auto;
+    /* border: #f22 solid 1px; */
+}
+
+.menu{
+    display: flex;
+    gap: 8px;
+    
+}
+
+.item{
+    text-align: center;
+    list-style: none;
+    /* Estilizacion y tamaño boton */
+    height: 18px;   
+    width: 84px;
+    color: #8f8f8f;
+    font-size: 14px;
+    font-weight: bold;
+    /* polimorfismo */
+    box-shadow: 4px -4px 5px #aeaec0;
+    border-radius: 6px;
+    
+}
+
+.item:hover{
+    color: #626262;
+    cursor: pointer;
+    /* polimorfismo */
+    box-shadow: -4px 4px 5px  #aeaec0;
+    transition: 420ms ease-in-out;
+    
+}
+
+
+.item_a:hover{
+    color: #1877f2;
+}
+
+
+.item_b:hover{
+    color: #ff4411;
+}
+
+
+.item_c:hover{
+    color: #25D366;
+}
+
+
+
+.item_d:hover{
+    color: #E4405F;
+}
+
+
+.item:active{
+    /* polimorfismo */
+    box-shadow:  inset -4px 4px 2px #c5c5c5, inset 4px -4px 2px #ffffff;
+    
+}
+
+/* LOGOTIPO */
+.contenedor_logo{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: #f22 solid 1px; */
+}
+.logo{
+    height: 31px;
+    cursor: pointer;
+}
+
+
+.titulo_principal{
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    margin: 0 4px;
+    text-align: center;
+    color: #2b2b2b;
+}
+
+/* contenedor contacto */
+.contacto{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 auto;
+    /* border: #f22 solid 1px; */
+}
+/* contacto telefono */
+.contacto__phone{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+/* contacto correo */
+.contacto__email{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* informacion de contacto del pie pagina */
+
+footer{
+    height: 420px;
+    width: 100%;
+    background: wheat;
+    border: 5px solid #fff;
+    position: relative;
+    top: 60px;
+}
+
+@media screen and (max-width: 960px){
+    .contenedor__cabecera{
+        height: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedor_logo{
+        width: 100vw;
+        height: 28px;
+        align-items: center;
+        grid-column: span 2;
+        order: 1;
+        /* border: #f22 solid 1px; */
+    }
+    .contenedor_menu{
+        position: relative;
+        bottom: 2px;
+        order: 3;
+        /* border: #f22 solid 1px; */
+    }
+    .contacto{
+        position: relative;
+        bottom: 3px;
+        order: 2;
+        /* border: #f22 solid 1px; */
+    }
+    
+
+}
+
+@media screen and (max-width: 480px){
+    .contenedor__cabecera{
+        height: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 4fr;
+    }
+    
+    .despliegueMenu{
+        height: 180px;
+        gap: 2px;
+    }
+    
+    .contenedor_logo{
+        height: 30px;
+        grid-column: span 1;
+        /* border: #f22 solid 1px; */
+    }
+
+    .contenedor_menu-activo{
+        height: 110px;
+        order: 3;
+    }
+    
+    .menu-activo{
+        height: 100%;
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: #f22 solid 1px; */
+        
+    }
+
+    .item-activo{   
+    width: 90%;
+    }
+    
+    .contenedor_menu{
+        display: none;
+    }
+    
+    .contacto-activo{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        margin: 0 auto;
+        gap: 22px;
+        order: 2;
+        /* border: #f22 solid 1px; */
+    }
+
+    .contacto{
+
+        display: none;
+    }
+
+}
+
+/* footer */

@@ -2,11 +2,11 @@
 
 //      --->fetch   API<---
 const listaClientes = () =>
-    fetch("https://spikke2.github.io/VTR/json/db.json/datos").then((respuesta) => respuesta.json());
+    fetch("http://localhost:3000/datos").then((respuesta) => respuesta.json());
 
 //      ----<obtener valor de datos db.jason>----
 const crearCliente = ( usuario, empresa, email, phone, descripcion) => {
-    return fetch("https://spikke2.github.io/VTR/json/db.json/datos", {
+    return fetch("http://localhost:3000/datos", {
         method: "POST",
         headers:{
             "content-type":"application/json",
