@@ -7,9 +7,10 @@
  */
  
 body {
+	/* width: 100vw; */
+	height: 98vh;
 	display: grid;
 	place-items: center;
-	height: 100vh;
 	background: linear-gradient(90deg,rgba(87, 21, 21, 1) 0%, rgba(13, 12, 12, 1) 8%, rgba(13, 12, 12, 1) 92%, rgba(87, 21, 21, 1) 100%);
 	font-family: Arial, Helvetica, sans-serif;
 	color: #fff;
@@ -87,15 +88,51 @@ body {
 @media screen and (max-width: 800px){
 	
 	.login {
-		width: 200px;
-		height: 200px;
-		padding: 20px;
-		background-size: 240px 280px;
+		width: 180px;
+		height: 140px;
+		background-size: 200px 220px;
+		/* border: #fff solid 2px; */
 	}
 
-	.link__login{
-		font-size: 12px;
-		padding-top: 126px;
+	.login:before,
+	.login__circuit-mask{
+	height: 420px;
+	width: 360px;
+}
+
+.login:before{
+	/* display: none; */
+	background: url(../assets/img/bg-circuito.svg) center / 420px 360px no-repeat;
+}
+
+.login__circuit-mask {
+	-webkit-mask: url(../assets/img/bg-circuito.svg) center / 420px 360px no-repeat ;
+	mask: url(../assets/img/bg-circuito.svg) center / 420px 360px no-repeat ;
+
+}
+
+.login__circuit-mask:before {
+	height: 62px;
+	width: 54px;
+	border: 0.6px solid #00f0ff;
+	animation: onda 3s infinite;
+}
+
+
+
+.link__login{
+		font-size: 8px;
 	}
+
+
+	@keyframes onda {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(7.2);
+	}
+}
 
 }
